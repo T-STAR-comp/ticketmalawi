@@ -1,0 +1,119 @@
+a{
+    text-decoration: none;
+}
+.head_txt{
+    text-align: start;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-left: 4%;
+}
+.head_tittle_txt{
+    text-align: start;
+    color: blue;
+    text-shadow: 0 4px 5px rgba(128, 128, 128, 0.363);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 5%;
+}
+.head_tittle_txt2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(87, 87, 87);
+    font-size: 1.5em;
+    text-shadow: 0  5px 6px rgba(70, 70, 70, 0.13);
+}
+.closeBtn{
+    position: fixed;
+    right: 4%;
+    top: 3%;
+}
+.closeBtn:active{
+    transform: scale(1.3);
+}
+hr{
+    visibility: visible;
+}
+.text_container{
+    padding: 1% 0;
+}
+.paragraphs{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+    font-size: 1.1em;
+    color: rgb(75, 75, 75);
+    padding: 4%;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+}
+.images_png{
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 50%;
+    filter: saturate(0);
+}
+.img_tittle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    margin: none;
+    text-shadow: 0  4px 5px rgba(128, 128, 128, 0.13);
+}
+.role_txt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: grey;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    text-shadow: 0  4px 5px rgba(128, 128, 128, 0.13);
+}
+.founder_div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: black;
+}
+
+
+@media (min-width: 920px){
+    .paragraphs{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: start;
+        width: 50%;
+        margin-left: 30%;
+        font-size: 1.1em;
+        color: rgb(75, 75, 75);
+    }
+    .images{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10%;
+    }
+    .img_tittle{
+        text-align: start;
+    }
+    .founder_div{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+}

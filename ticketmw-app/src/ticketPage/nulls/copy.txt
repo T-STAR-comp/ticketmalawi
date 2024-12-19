@@ -1,0 +1,127 @@
+import style from './styles/ticketpage.module.css';
+//import {Link, Outlet } from 'react-router-dom'
+//import HOME_URL from '../data.js';
+import { useState, useEffect } from 'react';
+import SendQrData from './ticketQrManage.js';
+
+function TicketPage() {
+    const [data1, setData1] = useState(null);
+    const [ticket_UID1, setTicket_UID1] = useState(null);
+
+    const [data2, setData2] = useState(null);
+    const [ticket_UID2, setTicket_UID2] = useState(null);
+
+    const [data3, setData3] = useState(null);
+    const [ticket_UID3, setTicket_UID3] = useState(null);
+
+    const [data4, setData4] = useState(null);
+    const [ticket_UID4, setTicket_UID4] = useState(null);
+
+    const [data5, setData5] = useState(null);
+    const [ticket_UID5, setTicket_UID5] = useState(null);
+
+    const [PosterURL, setPosterURL] = useState(null);
+    const [array, setArray] = useState(null);
+
+    /*const StoredData = JSON.parse(sessionStorage.getItem('ticketData'));
+    console.log(StoredData);*/
+
+    useEffect(() => {
+        console.log(JSON.parse(sessionStorage.getItem('ticketdata')));
+        const poster_URL = sessionStorage.getItem('imageData')
+        
+        const URL1 = sessionStorage.getItem('qrData1');
+        const UID1 =  sessionStorage.getItem('ticketUID1');
+
+        const URL2 = sessionStorage.getItem('qrData2');
+        const UID2 = sessionStorage.getItem('ticketUID2');
+
+        const URL3 = sessionStorage.getItem('qrData3');
+        const UID3 = sessionStorage.getItem('ticketUID3');
+
+        const URL4 = sessionStorage.getItem('qrData4');
+        const UID4 = sessionStorage.getItem('ticketUID4');
+
+        const URL5 = sessionStorage.getItem('qrData5');
+        const UID5 = sessionStorage.getItem('ticketUID5');
+
+        const valid = {URL1,URL2,URL3,URL4,URL5,UID1,UID2,UID3,UID4,UID5};
+        
+        if(valid){
+            setPosterURL(poster_URL);
+
+            setTicket_UID1(UID1);
+            setTicket_UID2(UID2);
+            setTicket_UID3(UID3);
+            setTicket_UID4(UID4);
+            setTicket_UID5(UID5);
+
+            setData1(URL1);
+            setData2(URL2);
+            setData3(URL3);
+            setData4(URL4);
+            setData5(URL5);
+        }
+    }, []);
+
+    const images = [
+        { src: data1, name: 'TicketMalawiTicket1.jpg' },
+        { src: data2, name: 'TicketMalawiTicket2.jpg' },
+        { src: data3, name: 'TicketMalawiTicket3.jpg' },
+        { src: data4, name: 'TicketMalawiTicket4.jpg' },
+        { src: data5, name: 'TicketMalawiTicket5.jpg' }
+      ];
+
+      const downloadAllImages = () => {
+        images.forEach((image) => {
+          if (image.src) {
+            const link = document.createElement('a');
+            link.href = image.src;
+            link.download = image.name;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        });
+
+        //window.location.href = '/';
+    
+        const UID_DATA = {
+            ticket_UID1: ticket_UID1 || null,
+            ticket_UID2: ticket_UID2 || null,
+            ticket_UID3: ticket_UID3 || null,
+            ticket_UID4: ticket_UID4 || null,
+            ticket_UID5: ticket_UID5 || null,
+        };
+        
+        SendQrData(UID_DATA);
+
+        sessionStorage.removeItem('qrData1','qrData2','qrData3','qrData4','qrData5','ticketUID1','ticketUID2','ticketUID3','ticketUID4','ticketUID15');
+        
+    };
+
+    return(
+        <div>
+
+             <p className={style.head_txt}>Ticket Malawi</p>
+
+            <p className={style.maintxt}>Download your Tickets below</p>
+
+
+            {data1? 
+            <div className={style.ticet_main_cont}>
+            {data1? <p className={style.ticket_comp}>TICKET 1</p> : null}
+            {data2? <p className={style.ticket_comp}>TICKET 2</p> : null}
+            {data3? <p className={style.ticket_comp}>TICKET 3</p> : null}
+            {data4? <p className={style.ticket_comp}>TICKET 4</p> : null}
+            {data5? <p className={style.ticket_comp}>TICKET 5</p> : null}
+            
+            {data1? <button className={style.download_btn} onClick={downloadAllImages} >{data1 && data2? 'Save All': 'Save'}</button> : null}
+        </div> : null}
+
+        </div>
+    )
+}
+
+export default TicketPage;

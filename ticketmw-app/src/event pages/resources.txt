@@ -1,0 +1,8 @@
+1. image/event poster(jpg file, 203 by 248)
+2. date (time/day/month/year)
+3. location (exact address)
+4. event name
+5. event description
+6. location
+7. standard ticket price
+8. vip ticket price
