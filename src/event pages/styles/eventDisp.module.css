@@ -1,0 +1,182 @@
+.discription_cont{
+    background-color: rgba(163, 163, 220, 0.34);
+    text-align: center;
+    padding: 3%;
+    margin: 5%;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.075);
+}
+.image{
+    border-radius: 9px;
+    width: 100%;
+}
+.date_location{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+.deviders{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+    padding: 4%;
+}
+.event_name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-wrap: nowrap;
+    font-size: 1.1em;
+}
+.location_name_cont{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+}
+.event_desc{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+}
+.buy_btn{
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    padding: 5% 10%;
+    margin: 4%;
+    transition-duration: 0.23s;
+}
+.buy_btn:hover{
+    background-color: white;
+    color: blue;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+.buy_btn:active{
+    background-color: rgb(74, 74, 244);
+}
+.time_location{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ticket_cont{
+    margin-top: 10%;
+    background-color: rgba(128, 128, 128, 0.11);
+    padding: 4%;
+    margin: 4%;
+    border-radius: 22px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.055);
+}
+.TL_details{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+.ticket_desc{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.radio{
+    padding: none;
+    cursor: pointer;
+}
+.ticket_type{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+.price_sty{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: end;
+    margin: auto;
+}
+.ticket_inputs{
+    display: flex;
+    flex-direction: row;
+}
+.txt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin: auto;
+}
+.input{
+    margin: auto;
+    padding: 1%;
+}
+.bottom_cont{
+    text-align: center;
+    padding: 2%;
+}
+.total_con{
+    display: flex;
+    flex-direction: row;
+}
+.total_hed{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+.total_txt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: auto;
+}
+.footer{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: black;
+}
+
+@media (min-width: 650px) {
+    .main_cont{
+        display: flex;
+        flex-direction: column;
+    }
+    .buy_btn{
+        cursor: pointer;
+        padding: 2% 3%;
+    }
+    .discription_cont{
+        padding: auto;
+        margin: 2% 30%;
+    }
+    .time_location{
+        padding: auto;
+        margin: 2% 40%;
+    }
+    .ticket_container{
+        padding: auto;
+        margin: 2% 20%;
+    }
+    .image{
+        width: auto;
+        height: auto;
+    }
+    .date_location{
+        font-size: 1em;
+    }
+    .event_name{
+        font-size: 1em;
+    }
+    .event_desc{
+        font-size: 1em;
+    }
+    .time_location{
+        font-size: 1em;
+    }
+    .ticket_cont{
+        padding: 3%;
+        margin: 2% 10%;
+    }
+    .TL_details{
+        font-size: 1em;
+    }
+    .ticket_desc{
+        font-size: 1em;
+    }
+}

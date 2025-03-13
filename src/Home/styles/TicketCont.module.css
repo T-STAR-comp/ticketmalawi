@@ -1,0 +1,38 @@
+.ticket_container{
+    text-align: center;
+    background-color: rgba(201, 201, 201, 0.082);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.041);
+    border-radius: 9px;
+    border: none;
+    padding: 5%;
+    margin: 7%;
+}
+.event_poster{
+    border-radius: 4px;
+    width: 100%;
+}
+.event_D_cont{
+    margin-top: 5%;
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.055);
+    background-color: rgba(201, 201, 201, 0.082);
+}
+.event_details{
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: start;
+    margin-top: 0%;
+    /*background-color: rgba(128, 128, 128, 0.247);
+    border-radius: 13px;*/
+    padding: 0%;
+    text-wrap: nowrap;
+}
+
+@media screen and (min-width: 768px){
+    .ticket_container{
+        margin: 2% 15%;
+    }
+    .event_poster{
+        width: 90%;
+        height: auto;
+    }
+}

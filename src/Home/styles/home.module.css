@@ -1,0 +1,98 @@
+.mainbody{
+    height: 100vh;
+}
+.headBar{
+    background-color: blue;
+    height: 9vh;
+    display: flex;
+    margin: -2%;
+    text-align: center;
+}
+.headtxt{
+    margin: auto;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+.tittle_nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+.tittle{
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: blue;
+}
+.NavHumburger{
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+}
+.NavHumburger:active{
+    transform: scale(1.4);
+}
+.line_menu{
+    margin-left: auto;
+    margin-right: 4%;
+    display: none;
+}
+.Line_men_cont{
+    display: flex;
+    flex-direction: row;
+}
+.link{
+    text-decoration: none;
+}
+.line_links{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35px;
+    text-wrap: nowrap;
+    color: black;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.13);
+    font-size: 1.25em;
+    transition-duration: 0.44s;
+}
+.line_links:hover{
+    transform: scale(1.1);
+    color: blue;
+    text-decoration: underline;
+}
+.line_links:active{
+    color: grey;
+}
+.upcomingtxt{
+    text-align: center;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+}
+.footer{
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 2%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: black;
+}
+
+@media screen and (min-width: 768px){
+    .NavHumburger{
+        display: none;
+    }
+    .line_menu{
+        display: flex;
+    }
+    .tittle{
+        font-size: 1.7em;
+    }
+    .headBar{
+        height: 12vh;
+    }
+}
