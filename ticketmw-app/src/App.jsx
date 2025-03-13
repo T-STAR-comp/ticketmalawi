@@ -11,6 +11,7 @@ import PaymentError from './Error/transFailed.jsx'
 import LayOut from './eventViewSource/layout.jsx'
 import LandingPage from './DefaultPages/landingpage.jsx'
 import MaintanancePage from './DefaultPages/maintanance.jsx'
+import BlueGalaxy from './special/special.jsx'
 
 function App() {
 
@@ -94,6 +95,7 @@ function App() {
         <Route path='/membersPage' element={<MembersPage/>} />
         <Route path='/ticketmalawi/getticket/page' element={<TicketPage />} />
         <Route path='/PaymentError/ticketmalawi' element={<PaymentError/>} />
+        <Route path='/bluegalaxy' element={<BlueGalaxy/>} />
         {/*eventPages paths*/}
         
         {/*dynamic paths*/}
@@ -103,7 +105,7 @@ function App() {
               key={Event.id}
               path={Event.EventURL}
               element={<LayOut 
-                eventdata={Event}
+              eventdata={Event}
               />}
             />
           ))

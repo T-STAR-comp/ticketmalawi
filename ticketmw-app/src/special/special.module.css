@@ -1,0 +1,174 @@
+.universeContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, #00152e, #000428, #000);
+    overflow: hidden;
+  }
+  
+  /* Stars */
+  .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: twinkle 3s infinite ease-in-out;
+  }
+  
+  .star:nth-child(odd) {
+    animation-duration: 5s;
+    background: rgba(173, 216, 230, 0.8);
+  }
+  
+  .star:nth-child(even) {
+    width: 2px;
+    height: 2px;
+    animation-duration: 7s;
+  }
+  
+  /* Shooting Stars */
+  .shootingStar {
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    animation: shoot 6s infinite ease-in-out;
+  }
+  
+  .shootingStar:nth-child(even) {
+    animation-delay: 1s;
+  }
+  
+  .shootingStar:nth-child(odd) {
+    animation-delay: 3s;
+  }
+  
+  /* Planet */
+  .planet {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #007bff, #002060);
+    border-radius: 50%;
+    box-shadow: 0 0 60px 30px rgba(0, 123, 255, 0.8);
+    animation: rotatePlanet 12s linear infinite;
+  }
+  
+  .moon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #cccccc, #888888);
+    border-radius: 50%;
+    animation: orbitMoon 8s linear infinite;
+  }
+  
+  .moon:nth-child(1) {
+    top: -90px;
+    left: 50px;
+  }
+  
+  .moon:nth-child(2) {
+    top: 100px;
+    left: -50px;
+  }
+  
+  .moon:nth-child(3) {
+    top: -50px;
+    right: -90px;
+  }
+  
+  /* Nebula */
+  .largeNebula {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    top: 10%;
+    left: 20%;
+    background: radial-gradient(circle, rgba(79, 172, 254, 0.3), rgba(0, 0, 255, 0.2));
+    border-radius: 50%;
+    filter: blur(120px);
+    animation: pulseNebula 12s infinite ease-in-out;
+  }
+  
+  /* Distant Galaxy */
+  .distantGalaxy {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: 5%;
+    right: 15%;
+    background: conic-gradient(from 0deg, #fff, #007bff, #ff0099, #4facfe, #fff);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: rotateGalaxy 25s infinite linear;
+  }
+  
+  /* Animations */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shoot {
+    0% {
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      top: 80%;
+      left: 120%;
+      opacity: 0;
+      transform: translateX(300px) translateY(-300px);
+    }
+  }
+  
+  @keyframes rotatePlanet {
+    0% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes orbitMoon {
+    0% {
+      transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes pulseNebula {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1.6);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes rotateGalaxy {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

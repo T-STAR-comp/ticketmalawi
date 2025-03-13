@@ -133,16 +133,28 @@
 }
 
 @media (min-width: 650px) {
+    .main_cont{
+        display: flex;
+        flex-direction: column;
+    }
     .buy_btn{
         cursor: pointer;
         padding: 2% 3%;
     }
     .discription_cont{
         padding: auto;
-        margin: auto 6%;
+        margin: 2% 30%;
+    }
+    .time_location{
+        padding: auto;
+        margin: 2% 40%;
+    }
+    .ticket_container{
+        padding: auto;
+        margin: 2% 20%;
     }
     .image{
-        width: 50%;
+        width: auto;
         height: auto;
     }
     .date_location{

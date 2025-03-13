@@ -25,7 +25,7 @@ export const generateQRCodes = async (url, numQRcodes, baseIdentifier,EventName,
         return await response.json();
     }
     catch(error) {
-        console.error('error:',error);
+        window.alert(err);
         throw error;
     }
 }

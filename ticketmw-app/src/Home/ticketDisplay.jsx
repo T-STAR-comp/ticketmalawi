@@ -4,9 +4,6 @@ import { useState, useEffect } from 'react';
 import TicketCont from './ticketCont.jsx'
 import UseFetch from '../APIDATA/dataApi.js';
 
-//image imports
-//import errorIcon from '../assets/icons/error_.svg';
-
 function TicketDisplay(){
         // Get data
     const[Events, SetEvents] = useState([]);

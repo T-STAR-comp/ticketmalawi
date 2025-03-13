@@ -59,7 +59,7 @@ function  About(){
             </div>
             <hr/>
             <div className={style.footer}>
-                &copy; 2024 Ticket Malawi | <a href="#" target="_blank">ticketstar/malawi.webstar.co</a>
+                &copy; 2024 Ticket Malawi | <a href="/bluegalaxy" target="_blank">ticketstar/malawi.oasis.co</a>
                 </div>
         </div>
     )

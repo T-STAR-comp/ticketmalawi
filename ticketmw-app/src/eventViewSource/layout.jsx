@@ -6,14 +6,12 @@ import EventDisp from '../event pages/eventDisp.jsx';
 import TransDisp from '../event pages/eventTransaction.jsx';
 import errorIcon from '../assets/icons/error_.svg';
 import close from '../assets/icons/close_FILL0_wght400_GRAD0_opsz24.svg';
-import { json, Link, Outlet } from 'react-router-dom';
+import {Link, Outlet } from 'react-router-dom';
 import { useState} from 'react';
-//import PaymentError from '../Error/transFailed.jsx';
 
 const LayOut = (props) => {
     
-    const { data, loading, error } = UseFetch('http://localhost:8080/api/geteventdata/ticketmalawi');
-
+    const { data, loading, error } = UseFetch(import.meta.env.VITE_eventdataurl);
     // State variables
     const [displayStyle, setDisplayStyle] = useState({ display: 'none' });
     const [errMsg, setErrMsg] = useState({display:'none'});
@@ -126,14 +124,14 @@ const LayOut = (props) => {
 
         try{
             
-        const response = await fetch(import.meta.VITE_updateDBURL,{
+        const response = await fetch(import.meta.env.VITE_updateDBURL,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(information)
         })
-
+        console.log(information)
         const data = await response.json();
         if (data){
             SetLoading(false);
@@ -272,7 +270,6 @@ const LayOut = (props) => {
                 checkout={openPayment}
             />
             
-
     </div>
         
     );

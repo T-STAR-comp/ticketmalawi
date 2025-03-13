@@ -2,7 +2,7 @@
 const SendQrData = (UID_DATA)=>{
     const execute = async () =>{
         try {
-            const res = await fetch ('http://localhost:8080/api/updatedb/ticketuid/ticketmalawi/valid',{
+            const res = await fetch (import.meta.env.VITE_TicketUIDSendURL,{
                 method: 'POST',
                 headers: {
                     'content-type':'application/json'

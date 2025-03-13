@@ -66,7 +66,7 @@ function EventDisp(props) {
             </div>
 
             <div className={style.footer}>
-                &copy; 2024 Ticket Malawi | <a href="https://ticketmalawi.webstar.co" target="_blank">ticketstar/malawi.webstar.co</a>
+                &copy; 2024 Ticket Malawi | <a href="/bluegalaxy" target="_blank">ticketstar/malawi.webstar.co</a>
             </div>
         </div>
     );

@@ -72,7 +72,7 @@
     margin-top: 0;
 }
 .footer{
-    
+    position: absolute;
     left: 20%;
     right: 20%;
     bottom: 2%;

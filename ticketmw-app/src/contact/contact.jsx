@@ -28,6 +28,10 @@ function Contact() {
         setMessage(e.target.value);
     };
 
+    const SendMsg = () => {
+        window.location.reload();
+    }
+
     const sendMessage = async () => {
 
         const information = {
@@ -113,11 +117,11 @@ function Contact() {
                     maxLength="300"
                 ></textarea>
 
-                <button className={style.send_btn}>Send</button>
+                {/*<button onClick={SendMsg} className={style.send_btn}>Send</button>*/}
             </div>
 
             <div className={style.footer}>
-                &copy; 2024 Ticket Malawi | <a href='/' target="_blank">ticketstar/malawi.webstar.co</a>
+                &copy; 2024 Ticket Malawi | <a href='/bluegalaxy' target="_blank">ticketstar/malawi.webstar.co</a>
             </div>
         </div>
     );

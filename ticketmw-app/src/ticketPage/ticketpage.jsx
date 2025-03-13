@@ -15,6 +15,25 @@ function TicketPage() {
     }
   }, []);
 
+  const SendUIDdata = async () => {
+
+    ticketsData.forEach( async (ticket) => {
+
+      let UidValue = ticket.uniqueIdentifier;
+
+      const res = await fetch(import.meta.env.VITE_TicketUIDSendURL,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({UidValue})
+      });
+
+      const data = await res.json();
+
+    });
+  };
+
   const Verifytransaction = async() =>{
 
     const data = {
@@ -61,10 +80,11 @@ function TicketPage() {
               link.click();
             })
             .catch((error) => {
-              console.error(`Error generating image for ticket ${ticket.uniqueIdentifier}:`, error);
+              window.alert(`Error generating image for ticket `);
             });
         }
       });
+      SendUIDdata();
     }
     catch(err){
       null
